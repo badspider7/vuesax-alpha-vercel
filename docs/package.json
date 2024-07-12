@@ -23,7 +23,7 @@
     "prismjs": "^1.29.0",
     "vue": "3.3.1",
     "vue-router": "4.2.4",
-    "vuesax-alpha": "0.2.0-beta.78"
+    "vuesax-alpha": "npm:vuesax-alpha@latest"
   },
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
@@ -34,6 +34,6 @@
     "@vuepress/plugin-prismjs": "2.0.0-beta.68",
     "@vuepress/plugin-register-components": "2.0.0-beta.68",
     "@vuepress/plugin-theme-data": "2.0.0-beta.68",
-    "vuepress": "2.0.0-beta.68"
+    "vuepress": "2.0.0-beta.64"
   }
 }
