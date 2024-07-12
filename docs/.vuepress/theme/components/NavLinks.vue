@@ -29,6 +29,7 @@ const themeData = useThemeData<VuesaxAlphaThemeOptions>()
 const themeLocaleData = useThemeLocaleData<VuesaxAlphaThemeOptions>()
 
 const userNav = computed(() => {
+  console.log(themeLocaleData.value?.navbar || themeData.value?.navbar || [])
   return themeLocaleData.value?.navbar || themeData.value?.navbar || []
 })
 
