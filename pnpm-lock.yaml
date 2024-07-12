@@ -86,7 +86,7 @@ importers:
         version: 2.4.2
       '@pnpm/find-workspace-packages':
         specifier: ^4.0.16
-        version: 4.0.43(@pnpm/logger@4.0.0)(typanion@3.12.1)
+        version: 4.0.43(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/logger':
         specifier: ^4.0.0
         version: 4.0.0
@@ -265,8 +265,8 @@ importers:
         specifier: 4.2.4
         version: 4.2.4(vue@3.3.1)
       vuesax-alpha:
-        specifier: npm:vuesax-alpha@latest
-        version: 0.2.0-beta.77(vue@3.3.1)
+        specifier: 0.2.0-beta.78
+        version: 0.2.0-beta.78(vue@3.3.1)
     devDependencies:
       '@types/prismjs':
         specifier: ^1.26.0
@@ -660,6 +660,13 @@ packages:
     dependencies:
       '@babel/highlight': 7.18.6
 
+  /@babel/code-frame@7.24.7:
+    resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/highlight': 7.24.7
+      picocolors: 1.0.1
+
   /@babel/compat-data@7.20.10:
     resolution: {integrity: sha512-sEnuDPpOJR/fcafHMjpcpGN5M2jbUGUHwmuWKM/YdPzeEDJg8bgmbcWQFUfE32MQjti1koACvoPVsDe8Uq+idg==}
     engines: {node: '>=6.9.0'}
@@ -824,6 +831,10 @@ packages:
     resolution: {integrity: sha512-awrNfaMtnHUr653GgGEs++LlAvW6w+DcPrOliSMXWCKo597CwL5Acf/wWdNkf/tfEQE3mjkeD1YOVZOUV/od1w==}
     engines: {node: '>=6.9.0'}
 
+  /@babel/helper-validator-identifier@7.24.7:
+    resolution: {integrity: sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==}
+    engines: {node: '>=6.9.0'}
+
   /@babel/helper-validator-option@7.18.6:
     resolution: {integrity: sha512-XO7gESt5ouv/LRJdrVjkShckw6STTaB7l9BrpBaAHDeF5YZT+01PCwmR0SJHnkW6i8OwW/EVWRShfi4j2x+KQw==}
     engines: {node: '>=6.9.0'}
@@ -845,6 +856,15 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       chalk: 2.4.2
       js-tokens: 4.0.0
+
+  /@babel/highlight@7.24.7:
+    resolution: {integrity: sha512-EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.24.7
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+      picocolors: 1.0.1
 
   /@babel/parser@7.20.7:
     resolution: {integrity: sha512-T3Z9oHybU+0vZlY9CiDSJQTD5ZapcW18ZctFMi0MOAl/4BjFF4ul7NVSARLdbGO5vDqy9eQiGTV0LtKfvCYvcg==}
@@ -931,7 +951,7 @@ packages:
     resolution: {integrity: sha512-MsIbFN0u+raeja38qboyF8TIT7K0BFzz/Yd/77ta4MsUsmP2RAnidIlwq7d5HFQrH/OZJecGV6B71C4zAgpoSQ==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/code-frame': 7.18.6
+      '@babel/code-frame': 7.24.7
       '@babel/generator': 7.20.7
       '@babel/helper-environment-visitor': 7.18.9
       '@babel/helper-function-name': 7.19.0
@@ -2184,7 +2204,7 @@ packages:
       aggregate-error: 3.1.0
     dev: true
 
-  /@pnpm/build-modules@9.3.11(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/build-modules@9.3.11(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-SjBi7vHZZPEepSn0ReFhlrfYtIHGHFvzOyDxeSBA8dy4XZmtcE/Dlulp5iU5N5sqnBepmBdSV5rK6XIHkm5wPw==}
     engines: {node: '>=14.6'}
     peerDependencies:
@@ -2194,7 +2214,7 @@ packages:
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
       '@pnpm/error': 3.1.0
       '@pnpm/graph-sequencer': 1.0.0
-      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/link-bins': 7.2.10(@pnpm/logger@4.0.0)
       '@pnpm/logger': 4.0.0
       '@pnpm/read-package-json': 6.0.11
@@ -2276,15 +2296,15 @@ packages:
       load-json-file: 6.2.0
     dev: false
 
-  /@pnpm/cli-utils@0.7.43(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/cli-utils@0.7.43(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-xawa2YteWQT6KS3tlU2t7SzHIS7hi6LYRQNwxFfNl4da89pTu3szZvVcYMTuEYjXsue5+L0OkJbWZL64lNME5A==}
     engines: {node: '>=14.6'}
     peerDependencies:
       '@pnpm/logger': ^4.0.0
     dependencies:
       '@pnpm/cli-meta': 3.0.8
-      '@pnpm/config': 15.10.12(@pnpm/logger@4.0.0)(typanion@3.12.1)
-      '@pnpm/default-reporter': 10.1.1(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/config': 15.10.12(@pnpm/logger@4.0.0)(typanion@3.14.0)
+      '@pnpm/default-reporter': 10.1.1(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/error': 3.1.0
       '@pnpm/logger': 4.0.0
       '@pnpm/manifest-utils': 3.1.6(@pnpm/logger@4.0.0)
@@ -2301,7 +2321,7 @@ packages:
       - typanion
     dev: true
 
-  /@pnpm/config@15.10.12(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/config@15.10.12(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-yCxgplRZOkQ9Y8V5MNjOIAL9cncbplTNlr+FWIvueRrCiU6zARZhsj7BIOXh+N8SKgtKyIb3UKOtgIslh1KYxQ==}
     engines: {node: '>=14.6'}
     dependencies:
@@ -2310,7 +2330,7 @@ packages:
       '@pnpm/git-utils': 0.1.0
       '@pnpm/matcher': 3.2.0
       '@pnpm/npm-conf': 2.0.0
-      '@pnpm/pnpmfile': 3.0.3(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/pnpmfile': 3.0.3(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/read-project-manifest': 3.0.13
       '@pnpm/types': 8.7.0
       camelcase: 6.3.0
@@ -2385,13 +2405,13 @@ packages:
       '@pnpm/types': 8.7.0
     dev: true
 
-  /@pnpm/core@6.0.3(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/core@6.0.3(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-fTmsXqX/zPNGn46OQqnmhI94jigXarCNo/E3LlB4Sr5WEQrZ/x6UIqXNY6NNBacXkzwBnFECe+quIi9lZOao/w==}
     engines: {node: '>=14.6'}
     peerDependencies:
       '@pnpm/logger': ^4.0.0
     dependencies:
-      '@pnpm/build-modules': 9.3.11(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/build-modules': 9.3.11(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/calc-dep-state': 3.0.1
       '@pnpm/constants': 6.1.0
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
@@ -2400,10 +2420,10 @@ packages:
       '@pnpm/filter-lockfile': 6.0.22(@pnpm/logger@4.0.0)
       '@pnpm/get-context': 7.0.3(@pnpm/logger@4.0.0)
       '@pnpm/graph-sequencer': 1.0.0
-      '@pnpm/headless': 18.7.6(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/headless': 18.7.6(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/hoist': 6.2.14(@pnpm/logger@4.0.0)
       '@pnpm/hooks.read-package-hook': 1.0.2
-      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/link-bins': 7.2.10(@pnpm/logger@4.0.0)
       '@pnpm/lockfile-file': 5.3.8(@pnpm/logger@4.0.0)
       '@pnpm/lockfile-to-pnp': 1.0.5(@pnpm/logger@4.0.0)
@@ -2423,7 +2443,7 @@ packages:
       '@pnpm/read-package-json': 6.0.11
       '@pnpm/read-project-manifest': 3.0.13
       '@pnpm/remove-bins': 3.0.13(@pnpm/logger@4.0.0)
-      '@pnpm/resolve-dependencies': 28.4.5(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/resolve-dependencies': 28.4.5(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/resolver-base': 9.1.2
       '@pnpm/store-controller-types': 14.1.3
       '@pnpm/symlink-dependency': 5.0.10(@pnpm/logger@4.0.0)
@@ -2457,13 +2477,13 @@ packages:
       rfc4648: 1.5.2
     dev: true
 
-  /@pnpm/default-reporter@10.1.1(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/default-reporter@10.1.1(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-HLLuntUHLYiONcuQmpOTpZgRnncb6aVQTXhCKQDqeXDQrG8Hl0uAoG7qQ7Qj9JNBO1Y3BlEwe4VIw8ELed9XJw==}
     engines: {node: '>=14.6'}
     peerDependencies:
       '@pnpm/logger': ^4.0.0
     dependencies:
-      '@pnpm/config': 15.10.12(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/config': 15.10.12(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
       '@pnpm/error': 3.1.0
       '@pnpm/logger': 4.0.0
@@ -2599,11 +2619,11 @@ packages:
       - '@pnpm/logger'
     dev: false
 
-  /@pnpm/find-workspace-packages@4.0.43(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/find-workspace-packages@4.0.43(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-2bkesfy8IfOnii6xhr0+HeDXjM95faZOX1nvbNJ1bvXYZCVc13QiDmukKP0ovzbhQ2mcVM5K16PsekeFHDrq7g==}
     engines: {node: '>=14.6'}
     dependencies:
-      '@pnpm/cli-utils': 0.7.43(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/cli-utils': 0.7.43(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/constants': 6.1.0
       '@pnpm/types': 8.7.0
       find-packages: 9.0.13
@@ -2641,7 +2661,7 @@ packages:
     resolution: {integrity: sha512-W3zsG9585cKL+FqgcT+IfTgZX5C+CbNkFjOnJN+qbysT1N30+BbvEByCcDMsTy7QDrAk6oS7WU1Rym3U2xlh2Q==}
     engines: {node: '>=14.6'}
     dependencies:
-      execa: /safe-execa@0.1.3
+      execa: /safe-execa@0.1.4
 
   /@pnpm/graceful-fs@2.0.0:
     resolution: {integrity: sha512-ogUZCGf0/UILZt6d8PsO4gA4pXh7f0BumXeFkcCe4AQ65PXPKfAkHC0C30Lheh2EgFOpLZm3twDP1Eiww18gew==}
@@ -2653,20 +2673,20 @@ packages:
     resolution: {integrity: sha512-iIJhmi7QjmafhijaEkh34Yxhjq3S/eiZnxww9K/SRXuDB5/30QnCyihR4R7vep8ONsGIR29hNPAtaNGd1rC/VA==}
     dev: true
 
-  /@pnpm/headless@18.7.6(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/headless@18.7.6(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-m98adTyZi/Fs8/Yk4i/Fif1swHFG3pQKRlCnA+uIWg5+r16ykowzG6rc/QzkbWFw5jxZNglzmlqxD+LITnFAyw==}
     engines: {node: '>=14.6'}
     peerDependencies:
       '@pnpm/logger': ^4.0.0
     dependencies:
-      '@pnpm/build-modules': 9.3.11(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/build-modules': 9.3.11(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/calc-dep-state': 3.0.1
       '@pnpm/constants': 6.1.0
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
       '@pnpm/error': 3.1.0
       '@pnpm/filter-lockfile': 6.0.22(@pnpm/logger@4.0.0)
       '@pnpm/hoist': 6.2.14(@pnpm/logger@4.0.0)
-      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/lifecycle': 13.1.12(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/link-bins': 7.2.10(@pnpm/logger@4.0.0)
       '@pnpm/lockfile-file': 5.3.8(@pnpm/logger@4.0.0)
       '@pnpm/lockfile-to-pnp': 1.0.5(@pnpm/logger@4.0.0)
@@ -2678,7 +2698,7 @@ packages:
       '@pnpm/package-requester': 19.0.6(@pnpm/logger@4.0.0)
       '@pnpm/read-package-json': 6.0.11
       '@pnpm/read-project-manifest': 3.0.13
-      '@pnpm/real-hoist': 0.2.20(typanion@3.12.1)
+      '@pnpm/real-hoist': 0.2.20(typanion@3.14.0)
       '@pnpm/store-controller-types': 14.1.3
       '@pnpm/symlink-dependency': 5.0.10(@pnpm/logger@4.0.0)
       '@pnpm/types': 8.7.0
@@ -2730,7 +2750,7 @@ packages:
       - '@yarnpkg/core'
     dev: true
 
-  /@pnpm/lifecycle@13.1.12(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/lifecycle@13.1.12(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-2IiJ4wl7Lfl0g+BT7WhtWBFychVNOSdboj5ZK9COj8Y9X2Q6GHWcmGs1+ueYV9bUmqESpNHzJBXAJGFhSjd7bg==}
     engines: {node: '>=14.6'}
     peerDependencies:
@@ -2739,7 +2759,7 @@ packages:
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
       '@pnpm/directory-fetcher': 3.1.5
       '@pnpm/logger': 4.0.0
-      '@pnpm/npm-lifecycle': 2.0.0(typanion@3.12.1)
+      '@pnpm/npm-lifecycle': 2.0.0(typanion@3.14.0)
       '@pnpm/read-package-json': 6.0.11
       '@pnpm/store-controller-types': 14.1.3
       '@pnpm/types': 8.7.0
@@ -2966,13 +2986,13 @@ packages:
       config-chain: 1.1.13
     dev: true
 
-  /@pnpm/npm-lifecycle@2.0.0(typanion@3.12.1):
+  /@pnpm/npm-lifecycle@2.0.0(typanion@3.14.0):
     resolution: {integrity: sha512-613qs9UwSFFVhXPv94Rt3tpJGv/D6mkHkZsByhHgBJII9gJXQ+bq4uru8y5q5g/kggS0raNH+18YGd9eu0Nawg==}
     engines: {node: '>=12.17'}
     dependencies:
       '@pnpm/byline': 1.0.0
       '@pnpm/error': 4.0.1
-      '@yarnpkg/shell': 3.2.0-rc.8(typanion@3.12.1)
+      '@yarnpkg/shell': 3.2.0-rc.8(typanion@3.14.0)
       node-gyp: 8.4.1
       resolve-from: 5.0.0
       slide: 1.1.6
@@ -3046,7 +3066,7 @@ packages:
       '@pnpm/logger': 4.0.0
       '@pnpm/types': 8.7.0
       detect-libc: 2.0.1
-      execa: /safe-execa@0.1.3
+      execa: /safe-execa@0.1.4
       mem: 8.1.1
       semver: 7.5.4
     dev: true
@@ -3062,7 +3082,7 @@ packages:
       '@pnpm/logger': 4.0.0
       '@pnpm/types': 8.4.0
       detect-libc: 2.0.1
-      execa: /safe-execa@0.1.3
+      execa: /safe-execa@0.1.4
       mem: 8.1.1
       semver: 7.5.4
     dev: false
@@ -3141,13 +3161,13 @@ packages:
       path-absolute: 1.0.1
     dev: false
 
-  /@pnpm/pnpmfile@3.0.3(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/pnpmfile@3.0.3(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-QCxTHgsFe3ff58l1ps1v5Bzg4tu4o3h1v8JfojL4I3NX86JSQZHyF434ikVWGAp7nHl3UAbV9dvtimw/iZyshg==}
     engines: {node: '>=14.6'}
     peerDependencies:
       '@pnpm/logger': ^4.0.0
     dependencies:
-      '@pnpm/core': 6.0.3(@pnpm/logger@4.0.0)(typanion@3.12.1)
+      '@pnpm/core': 6.0.3(@pnpm/logger@4.0.0)(typanion@3.14.0)
       '@pnpm/core-loggers': 7.1.0(@pnpm/logger@4.0.0)
       '@pnpm/error': 3.1.0
       '@pnpm/lockfile-types': 4.3.3
@@ -3246,13 +3266,13 @@ packages:
       realpath-missing: 1.1.0
     dev: true
 
-  /@pnpm/real-hoist@0.2.20(typanion@3.12.1):
+  /@pnpm/real-hoist@0.2.20(typanion@3.14.0):
     resolution: {integrity: sha512-z8sQ8MXj/hOamBKd9IvU28sLnZuy+rpQaHnTp7WyXVcKT+MKgX8Ez7jDjAUCjdeRq1Bd1efP5eo3fd49kyhuSA==}
     engines: {node: '>=14.6'}
     dependencies:
       '@pnpm/error': 3.1.0
       '@pnpm/lockfile-utils': 4.2.6
-      '@yarnpkg/nm': 4.0.0-rc.14(typanion@3.12.1)
+      '@yarnpkg/nm': 4.0.0-rc.14(typanion@3.14.0)
       dependency-path: 9.2.6
     transitivePeerDependencies:
       - typanion
@@ -3294,7 +3314,7 @@ packages:
       cli-columns: 4.0.0
     dev: true
 
-  /@pnpm/resolve-dependencies@28.4.5(@pnpm/logger@4.0.0)(typanion@3.12.1):
+  /@pnpm/resolve-dependencies@28.4.5(@pnpm/logger@4.0.0)(typanion@3.14.0):
     resolution: {integrity: sha512-8zzWFKG7VgGfRRdzcDXwHUGKokYSwWfjlGHgpOn4+TFnb+YAklQlzxp0LtfubnBDRMMxSuo7IWv3/KE0ZQeTeQ==}
     engines: {node: '>=14.6'}
     peerDependencies:
@@ -3315,7 +3335,7 @@ packages:
       '@pnpm/store-controller-types': 14.1.3
       '@pnpm/types': 8.7.0
       '@pnpm/which-version-is-pinned': 3.0.0
-      '@yarnpkg/core': 4.0.0-rc.14(typanion@3.12.1)
+      '@yarnpkg/core': 4.0.0-rc.14(typanion@3.14.0)
       dependency-path: 9.2.6
       encode-registry: 3.0.0
       filenamify: 4.3.0
@@ -5087,7 +5107,7 @@ packages:
     resolution: {integrity: sha512-loGD63sacRzOzSJgQnB9ZAhaQGkN7wl2Zuw7tsphI5Isa0irijrRo6EnJii/GgjGefIFO8AIO7UivzRhFaEk9w==}
     dev: false
 
-  /@yarnpkg/core@4.0.0-rc.14(typanion@3.12.1):
+  /@yarnpkg/core@4.0.0-rc.14(typanion@3.14.0):
     resolution: {integrity: sha512-SWq+T56I7GiRMrMECGsvCJvQmbXi+pBexjX9sYICPj+OgTHbWDmIOh/OrSC8honE6WEE2ZzPNmwF4Y355NKgew==}
     engines: {node: '>=14.15.0'}
     dependencies:
@@ -5097,11 +5117,11 @@ packages:
       '@yarnpkg/fslib': 3.0.0-rc.36
       '@yarnpkg/libzip': 3.0.0-rc.36(@yarnpkg/fslib@3.0.0-rc.36)
       '@yarnpkg/parsers': 3.0.0-rc.36
-      '@yarnpkg/shell': 4.0.0-rc.36(typanion@3.12.1)
+      '@yarnpkg/shell': 4.0.0-rc.36(typanion@3.14.0)
       camelcase: 5.3.1
       chalk: 3.0.0
       ci-info: 3.7.1
-      clipanion: 3.2.0-rc.14(typanion@3.12.1)
+      clipanion: 3.2.0-rc.14(typanion@3.14.0)
       cross-spawn: 7.0.3
       diff: 5.1.0
       globby: 11.1.0
@@ -5120,7 +5140,7 @@ packages:
       - typanion
     dev: true
 
-  /@yarnpkg/core@4.0.0-rc.36(typanion@3.12.1):
+  /@yarnpkg/core@4.0.0-rc.36(typanion@3.14.0):
     resolution: {integrity: sha512-j7KFKdrdQurr+MRk5IJyyi7mlZhpgsRvwyfYAlYMM/+uEAzGq1Qr9U4lbyppQE+KmEyj8N7FzPyYdSXz2IOX0g==}
     engines: {node: '>=14.15.0'}
     dependencies:
@@ -5130,11 +5150,11 @@ packages:
       '@yarnpkg/fslib': 3.0.0-rc.36
       '@yarnpkg/libzip': 3.0.0-rc.36(@yarnpkg/fslib@3.0.0-rc.36)
       '@yarnpkg/parsers': 3.0.0-rc.36
-      '@yarnpkg/shell': 4.0.0-rc.36(typanion@3.12.1)
+      '@yarnpkg/shell': 4.0.0-rc.36(typanion@3.14.0)
       camelcase: 5.3.1
       chalk: 3.0.0
       ci-info: 3.7.1
-      clipanion: 3.2.0-rc.14(typanion@3.12.1)
+      clipanion: 3.2.0-rc.14(typanion@3.14.0)
       cross-spawn: 7.0.3
       diff: 5.1.0
       globby: 11.1.0
@@ -5201,11 +5221,11 @@ packages:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
     dev: true
 
-  /@yarnpkg/nm@4.0.0-rc.14(typanion@3.12.1):
+  /@yarnpkg/nm@4.0.0-rc.14(typanion@3.14.0):
     resolution: {integrity: sha512-bPKKI6+IqDTLNUQcKYlphPov9iHDXmx9ktWrm1fT3xG65EyqpJR4pN5UnQ39uFbNqQvczj719yKwmVjsrVG1Bw==}
     engines: {node: '>=14.15.0'}
     dependencies:
-      '@yarnpkg/core': 4.0.0-rc.36(typanion@3.12.1)
+      '@yarnpkg/core': 4.0.0-rc.36(typanion@3.14.0)
       '@yarnpkg/fslib': 3.0.0-rc.36
     transitivePeerDependencies:
       - typanion
@@ -5236,7 +5256,7 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@yarnpkg/shell@3.2.0-rc.8(typanion@3.12.1):
+  /@yarnpkg/shell@3.2.0-rc.8(typanion@3.14.0):
     resolution: {integrity: sha512-UEcdjx+0gUwa3N/fWfnlqae//b7cNc1Imla+W7jqc9XMoydk3CG5EISx+5KY2hjrhpaZ55bXUP9Z6q0mjo+KdA==}
     engines: {node: '>=12 <14 || 14.2 - 14.9 || >14.10.0'}
     hasBin: true
@@ -5244,7 +5264,7 @@ packages:
       '@yarnpkg/fslib': 2.10.0
       '@yarnpkg/parsers': 2.5.1
       chalk: 3.0.0
-      clipanion: 3.2.0-rc.14(typanion@3.12.1)
+      clipanion: 3.2.0-rc.14(typanion@3.14.0)
       cross-spawn: 7.0.3
       fast-glob: 3.3.2
       micromatch: 4.0.5
@@ -5254,7 +5274,7 @@ packages:
       - typanion
     dev: true
 
-  /@yarnpkg/shell@4.0.0-rc.36(typanion@3.12.1):
+  /@yarnpkg/shell@4.0.0-rc.36(typanion@3.14.0):
     resolution: {integrity: sha512-FWotbTSjfVGdVikFPr1SpQja7ZfX6FfARGIV0AnhxQVCpiNWBgRQwoAOXf0HyL0YcdwBjwk67LSLjtqnmC1uWw==}
     engines: {node: '>=14.15.0'}
     hasBin: true
@@ -5262,7 +5282,7 @@ packages:
       '@yarnpkg/fslib': 3.0.0-rc.36
       '@yarnpkg/parsers': 3.0.0-rc.36
       chalk: 3.0.0
-      clipanion: 3.2.0-rc.14(typanion@3.12.1)
+      clipanion: 3.2.0-rc.14(typanion@3.14.0)
       cross-spawn: 7.0.3
       fast-glob: 3.3.2
       micromatch: 4.0.5
@@ -5814,8 +5834,8 @@ packages:
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  /bare-events@2.2.2:
-    resolution: {integrity: sha512-h7z00dWdG0PYOQEvChhOSWvOfkIKsdZGkWr083FgN/HyoQuebSew/cgirYqh9SCuy/hRvxc5Vy6Fw8xAmYHLkQ==}
+  /bare-events@2.4.2:
+    resolution: {integrity: sha512-qMKFd2qG/36aA4GwvKq8MxnPgCQAmBWmSyLWsJcbn8v03wvIPQ/hG1Ms8bPzndZxMDoHpxez5VOS+gC9Yi24/Q==}
     requiresBuild: true
     dev: true
     optional: true
@@ -6418,12 +6438,12 @@ packages:
       string-width: 5.1.2
     dev: true
 
-  /clipanion@3.2.0-rc.14(typanion@3.12.1):
+  /clipanion@3.2.0-rc.14(typanion@3.14.0):
     resolution: {integrity: sha512-lj5zydbH786t6gpXe6oNX7CM5YKhd0CDhcXG8pKyRa2Nz5cgj1yhnNKxDi/MyPYwjyvAG5oVBeDdYCGUAgD8lQ==}
     peerDependencies:
       typanion: '*'
     dependencies:
-      typanion: 3.12.1
+      typanion: 3.14.0
     dev: true
 
   /cliui@3.2.0:
@@ -8910,7 +8930,7 @@ packages:
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
-      nan: 2.17.0
+      nan: 2.20.0
     dev: false
     optional: true
 
@@ -11154,8 +11174,8 @@ packages:
     engines: {node: '>= 0.10'}
     dev: false
 
-  /nan@2.17.0:
-    resolution: {integrity: sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==}
+  /nan@2.20.0:
+    resolution: {integrity: sha512-bk3gXBZDGILuuo/6sKtr0DQmSThYHLtNCdSdXk9YkxD/jK6X2vmCyyXBBxyqZ4XcnzTyYEAThfX3DCEnLf6igw==}
     requiresBuild: true
     dev: false
     optional: true
@@ -11794,7 +11814,7 @@ packages:
     resolution: {integrity: sha512-ayCKvm/phCGxOkYRSCM82iDwct8/EonSEgCSxWxD7ve6jHggsFl4fZVQBPRNgQoKiuV/odhFrGzQXZwbifC8Rg==}
     engines: {node: '>=8'}
     dependencies:
-      '@babel/code-frame': 7.18.6
+      '@babel/code-frame': 7.24.7
       error-ex: 1.3.2
       json-parse-even-better-errors: 2.3.1
       lines-and-columns: 1.2.4
@@ -11982,6 +12002,9 @@ packages:
 
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+
+  /picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
   /picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -12814,7 +12837,7 @@ packages:
       rollup: 2.79.1
       typescript: 4.9.4
     optionalDependencies:
-      '@babel/code-frame': 7.18.6
+      '@babel/code-frame': 7.24.7
     dev: true
 
   /rollup-plugin-esbuild@4.10.3(esbuild@0.14.54)(rollup@2.79.1):
@@ -12907,8 +12930,8 @@ packages:
   /safe-buffer@5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
 
-  /safe-execa@0.1.3:
-    resolution: {integrity: sha512-KuOb5C35fJRrhTfErHX+Bw03PayibKwpmOPHnyWMkwSqeiyjq2/D6E524rtJFrvqoUKH6iTe/NC4nOtgWflU7g==}
+  /safe-execa@0.1.4:
+    resolution: {integrity: sha512-GI3k4zl4aLC3lxZNEEXAxxcXE6E3TfOsJ5xxJPhcAv9MWwnH2O9I0HrDmZFsVnu/C8wzRYSsTHdoVRmL0VicDw==}
     engines: {node: '>=12'}
     dependencies:
       '@zkochan/which': 2.0.3
@@ -13374,7 +13397,7 @@ packages:
       fast-fifo: 1.3.2
       queue-tick: 1.0.1
     optionalDependencies:
-      bare-events: 2.2.2
+      bare-events: 2.4.2
     dev: true
 
   /string-argv@0.3.1:
@@ -13918,8 +13941,8 @@ packages:
     resolution: {integrity: sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA==}
     dev: true
 
-  /typanion@3.12.1:
-    resolution: {integrity: sha512-3SJF/czpzqq6G3lprGFLa6ps12yb1uQ1EmitNnep2fDMNh1aO/Zbq9sWY+3lem0zYb2oHJnQWyabTGUZ+L1ScQ==}
+  /typanion@3.14.0:
+    resolution: {integrity: sha512-ZW/lVMRabETuYCd9O9ZvMhAh8GslSqaUjxmK/JLPCh6l73CvLBiuXswj/+7LdnWOgYsQ130FqLzFz5aGT4I3Ug==}
     dev: true
 
   /type-check@0.3.2:
@@ -14350,7 +14373,7 @@ packages:
     dependencies:
       browserslist: 4.21.10
       escalade: 3.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   /update-browserslist-db@1.0.15(browserslist@4.23.0):
     resolution: {integrity: sha512-K9HWH62x3/EalU1U6sjSZiylm9C8tgq2mSvshZpqc7QE69RaA2qjhkW2HlNA0tFpEbtyFz7HTqbSdN4MSwUodA==}
@@ -14845,8 +14868,8 @@ packages:
       - vue
     dev: true
 
-  /vuesax-alpha@0.2.0-beta.77(vue@3.3.1):
-    resolution: {integrity: sha512-cMR9W2z9xn8k4vF1DFzUPsNvemMgO6INdy/RcTODcg0lkP8yXAKadWud10MXq/zNVXjyie0kn/emEGinBroWoA==}
+  /vuesax-alpha@0.2.0-beta.78(vue@3.3.1):
+    resolution: {integrity: sha512-qfR+4dYMvpCZ29FQ0qrDto2UIMT0uVVerWn51DPULXYxnF0E2YxBJZTu1v+T11CoB/YQ0WDuyrB07EYxfc08kg==}
     peerDependencies:
       vue: ^3.2.0
     dependencies:
