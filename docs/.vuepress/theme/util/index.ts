@@ -30,6 +30,7 @@ export function getHash(path: string) {
 }
 
 export function isExternal(path: string) {
+  console.log('path========:', path)
   return outboundRE.test(path)
 }
 
