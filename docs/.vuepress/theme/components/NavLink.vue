@@ -33,10 +33,15 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { isLinkMailto, isLinkTel } from '@vuepress/shared'
+// import { isLinkMailto, isLinkTel } from '@vuepress/shared'
 import { useRoute } from 'vue-router'
 import { isExternal, isMathcedPath } from '../util'
 import type { NavbarItem } from 'vuepress-vite'
+
+const isLinkMailto = (link) => link.startsWith('mailto:')
+
+// src/utils/isLinkTel.ts
+const isLinkTel = (link) => link.startsWith('tel:')
 
 const props = defineProps<{
   navItem: NavbarItem
